@@ -484,7 +484,16 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// The director needs all of the last names in upper case so they are better seen on name tags.
+let lastCaps = runners.map(runner => runner.last_name.toUpperCase());
 
 // Problem 2
+// The director got drunk and offered the entire fund raiser 1 billion if they could find out the number of all ids added together.
+let idTotal = runners.reduce((total, runner) => total + runner.id, 0);
 
 // Problem 3
+//The director is from Feudal Japan and likes the participants be named by last name, then first name.
+let fullNameReverse = [].reverse();
+let functionWorksAgain = runners.forEach(runner => fullNameReverse.push(runner.first_name + " " + runner.last_name));
+
+console.log(fullNameReverse);
