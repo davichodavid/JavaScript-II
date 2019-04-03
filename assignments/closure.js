@@ -1,6 +1,20 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+const bigClosure = () => {
+  let varUsed = "This will be available to all functions underneath";
 
+  function smallerCloser() {
+    console.log(varUsed);
+
+    function evenSmaller() {
+      console.log(`${varUsed}, Success!!`);
+    }
+    evenSmaller();
+  }
+  smallerCloser();
+}
+
+bigClosure();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
